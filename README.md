@@ -10,6 +10,7 @@ The database can be changed at any time but keep in mind that you need to restar
 
 The way it works is that when it finds a match (You blacklisted 'HackerMan123' and someone with that very name invades you) it will force a disconnect on them, it works in a similar way if the other player would force-close their game or crash.
 If you invade however and find a match, instead the game will disconnect you from their world, cancelling your Co-op/invasion.
+When a match happens, the tool will also give you details about the user, providing their in-game name and Steam ID for you to add to your list or share to other users.
 
 To add someone to your list, go to the active players and copy paste their name, the same method is used for their Steam ID.
 In case you fail to get their ID, you can go to their profile, get their SteamID from there and convert it into Hexadecimal.
