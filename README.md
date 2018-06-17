@@ -16,7 +16,7 @@ To add someone to your list, go to the active players and copy paste their name,
 In case you fail to get their ID, you can go to their profile, get their SteamID from there and convert it into Hexadecimal.
 Keep in mind that every entry must be in "quotes" and must end with a comma.
 
-This tool will only check wether you are the host or a phantom, and read the names and ID's of other players. You can also be able to see the level and attributes of the other player. It will not change any of your data and therefore is safe to use.
+This tool will only check wether you are the host or a phantom, and read the names and ID's of other players. You can also be able to see the level and attributes of the other players. It will not change any of your data and therefore is safe to use.
 
 This tool cannot be used to detect hacking or cheating of any sort, it can only be used to prevent users from connecting with you.
 
