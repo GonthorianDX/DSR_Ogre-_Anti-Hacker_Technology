@@ -1,0 +1,1881 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="26">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"Open"</Description>
+      <Options moHideChildren="1"/>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>{Dark Souls Remastered Table by Phokz
+Anti-Hacker Technology by GonthorianDX
+https://fearlessrevolution.com/threads/dark-souls-
+remastered.6856/
+}
+[ENABLE]
+
+{$lua}
+openProcess("DarkSoulsRemastered.exe")
+autoAssemble([[
+aobscanmodule(GetA,DarkSoulsRemastered.exe,48 89 05 xx xx xx xx 8D 42)
+registersymbol(GetA)
+]])
+local addr = getAddress("GetA")
+addr = addr + readInteger(addr + 3) + 7
+unregisterSymbol("BaseA")
+registerSymbol("BaseA", addr, true)
+
+autoAssemble([[
+aobscanmodule(GetB,DarkSoulsRemastered.exe,48 8B 05 xx xx xx xx 45 33 ED 48 8B F1 48 85 C0)
+registersymbol(GetB)
+]])
+local addr = getAddress("GetB")
+addr = addr + readInteger(addr + 3) + 7
+unregisterSymbol("BaseB")
+registerSymbol("BaseB", addr, true)
+
+autoAssemble([[
+aobscanmodule(GetC,DarkSoulsRemastered.exe,48 8B 05 xx xx xx xx 0F 28 01 66 0F 7F 80 xx xx 00 00 C6 80)
+registersymbol(GetC)
+]])
+local addr = getAddress("GetC")
+addr = addr + readInteger(addr + 3) + 7
+unregisterSymbol("BaseC")
+registerSymbol("BaseC", addr, true)
+
+autoAssemble([[
+aobscanmodule(GetD,DarkSoulsRemastered.exe,48 8B 05 xx xx xx xx 80 B8 B0 00 00 00 00 0F 84 xx xx xx xx 8B 51 24 48)
+registersymbol(GetD)
+]])
+local addr = getAddress("GetD")
+addr = addr + readInteger(addr + 3) + 7
+unregisterSymbol("BaseD")
+registerSymbol("BaseD", addr, true)
+
+autoAssemble([[
+aobscanmodule(GetE,DarkSoulsRemastered.exe,48 8B 05 xx xx xx xx 48 8B 88 98 0B 00 00 8B 41 3C C3)
+registersymbol(GetE)
+]])
+local addr = getAddress("GetE")
+addr = addr + readInteger(addr + 3) + 7
+unregisterSymbol("BaseE")
+registerSymbol("BaseE", addr, true)
+
+
+autoAssemble([[
+aobscanmodule(GetP,DarkSoulsRemastered.exe,4C 8B 05 xx xx xx xx 48 63 C9 48 8D 04 C9)
+registersymbol(GetP)
+]])
+local addr = getAddress("GetP")
+addr = addr + readInteger(addr + 3) + 7
+unregisterSymbol("BaseP")
+registerSymbol("BaseP", addr, true)
+
+autoAssemble([[
+aobscanmodule(GetX,DarkSoulsRemastered.exe,48 8B 3D xx xx xx xx 48 85 FF 74 xx 48 8B 7F 68 48 85 FF 74 xx 0F B6 87 86 02 00 00 )
+registersymbol(GetX)
+]])
+local addr = getAddress("GetX")
+addr = addr + readInteger(addr + 3) + 7
+unregisterSymbol("BaseX")
+registerSymbol("BaseX", addr, true)
+
+autoAssemble([[
+aobscanmodule(GetZ,DarkSoulsRemastered.exe,48 8B 05 xx xx xx xx FF 40 1C 48 8B C3 4D 85 E4)
+registersymbol(GetZ)
+]])
+local addr = getAddress("GetZ")
+addr = addr + readInteger(addr + 3) + 7
+unregisterSymbol("BaseZ")
+registerSymbol("BaseZ", addr, true)
+
+autoAssemble([[
+aobscanmodule(GetLockBonusAddr,DarkSoulsRemastered.exe,48 8B 0D xx xx xx xx 89 99 58 15 00 00)
+registersymbol(GetLockBonusAddr)
+]])
+local addr = getAddress("GetLockBonusAddr")
+addr = addr + readInteger(addr + 3) + 7
+unregisterSymbol("LockBonusBase")
+registerSymbol("LockBonusBase", addr, true)
+
+autoAssemble([[
+aobscanmodule(GetMB,DarkSoulsRemastered.exe,48 8B 05 xx xx xx xx 48 63 D1 48 8B 44 D0 08 C3)
+registersymbol(GetMB)
+]])
+local addr = getAddress("GetMB")
+addr = addr + readInteger(addr + 3) + 7
+unregisterSymbol("BaseMB")
+registerSymbol("BaseMB", addr, true)
+
+autoAssemble([[
+aobscanmodule(GetR,DarkSoulsRemastered.exe,48 8B 05 xx xx xx xx 45 33 ED 48 85 C0)
+registersymbol(GetR)
+]])
+local addr = getAddress("GetR")
+addr = addr + readInteger(addr + 3) + 7
+unregisterSymbol("BaseR")
+registerSymbol("BaseR", addr, true)
+
+autoAssemble([[
+aobscanmodule(GetMenu,DarkSoulsRemastered.exe,48 8B 05 xx xx xx xx 48 63 C9 89 54 88 30)
+registersymbol(GetMenu)
+]])
+local addr = getAddress("GetMenu")
+addr = addr + readInteger(addr + 3) + 7
+unregisterSymbol("BaseMenu")
+registerSymbol("BaseMenu", addr, true)
+
+autoAssemble([[
+aobscanmodule(GetN2,DarkSoulsRemastered.exe, 48 89 05 * * * * 48 83 3D * * * * 00 75 * 4C 8B 05 * * * * 4C 89 44 24 48)
+registersymbol(GetN2)
+]])
+local addr = getAddress("GetN2")
+addr = addr + readInteger(addr + 3) + 7
+unregisterSymbol("BaseN2")
+registerSymbol("BaseN2", addr, true)
+
+autoAssemble([[
+aobscanmodule(GetCAR,DarkSoulsRemastered.exe,48 8B 05 xx xx xx xx 48 89 48 60 E8)
+registersymbol(GetCAR)
+]])
+local addr = getAddress("GetCAR")
+addr = addr + readInteger(addr + 3) + 7
+unregisterSymbol("BaseCAR")
+registerSymbol("BaseCAR", addr, true)
+
+autoAssemble([[
+aobscanmodule(GetBaseNS2,DarkSoulsRemastered.exe,48 8B 0D xx xx xx xx E8 xx xx xx xx 41 8B 8E A8)
+registersymbol(GetBaseNS2)
+]])
+local addr = getAddress("GetBaseNS2")
+addr = addr + readInteger(addr + 3) + 7
+unregisterSymbol("BaseNS2")
+registerSymbol("BaseNS2", addr, true)
+
+autoAssemble([[
+aobscanmodule(GetPF,DarkSoulsRemastered.exe,48 8B 0D xx xx xx xx 41 B8  01  00 00 00 44 )
+registersymbol(GetPF)
+]])
+local addr = getAddress("GetPF")
+addr = addr + readInteger(addr + 3) + 7
+unregisterSymbol("ProgressionFlags")
+registerSymbol("ProgressionFlags", addr, true)
+unregisterSymbol('XC')
+registerSymbol('XC',0x660)
+
+function WepIDRound_Read(b1,b2,b3,b4,address)
+  local Int = readInteger(address)
+  local mult = 10^(-2) --number of places to ignore
+  return math.floor(Int * mult) / mult
+end
+
+function WepIDRound_Write(i,address)
+  return 0,0,0,0
+end
+
+CheatTable = getAddressList()
+
+
+
+{$asm}
+[DISABLE]
+unregisterSymbol(BaseA)
+unregisterSymbol(GetA)
+unregisterSymbol(BaseB)
+unregisterSymbol(GetB)
+unregisterSymbol(BaseC)
+unregisterSymbol(GetC)
+unregisterSymbol(BaseD)
+unregisterSymbol(GetD)
+unregisterSymbol(BaseP)
+unregisterSymbol(GetP)
+unregisterSymbol(BaseE)
+unregisterSymbol(GetE)
+unregisterSymbol(BaseX)
+unregisterSymbol(GetX)
+unregisterSymbol(BaseZ)
+unregisterSymbol(GetZ)
+unregisterSymbol(BaseMB)
+unregisterSymbol(GetMB)
+unregisterSymbol(BaseR)
+unregisterSymbol(GetR)
+unregisterSymbol(BaseCAR)
+unregisterSymbol(GetCARR)
+unregisterSymbol(BaseN2)
+unregisterSymbol(GetN2)
+unregisterSymbol(BaseMenu)
+unregisterSymbol(GetMenu)
+unregisterSymbol(BaseN2)
+unregisterSymbol(GetBaseN2)
+unregisterSymbol(LockBonusBase)
+unregisterSymbol(GetLockBonusAddr)
+unregisterSymbol(GetPF)
+unregisterSymbol(ProgressionFlags)
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>1337049299</ID>
+          <Description>"Ogre Anti-Hack Technology Name"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>{Script by GonthorianDX
+This script checks for blacklisted players based off their in-game name
+kicks them if you are the host or you will leave the session if you are not the host}
+
+
+[ENABLE]
+{$lua}
+if syntaxcheck then return end
+
+  local Blacklist = {
+  --Names go here
+  "Malcolm Reynolds",
+  "Loki",
+  "Loki the Witch",
+  }
+
+
+--------------------LEAVE ALL THIS CRAP BELOW HERE ALONE------------------------
+
+local function checkForPlayers()
+  local CheatTable = getAddressList()
+  local Player1 = CheatTable.getMemoryRecordByDescription("Name Player 1").Value
+  local Player2 = CheatTable.getMemoryRecordByDescription("Name Player 2").Value
+  local Player3 = CheatTable.getMemoryRecordByDescription("Name Player 3").Value
+  local Player4 = CheatTable.getMemoryRecordByDescription("Name Player 4").Value
+  local Player5 = CheatTable.getMemoryRecordByDescription("Name Player 5").Value
+  local Host = "[[BaseB]+10]+10"
+
+  local isActiveHost = readInteger(Host)
+  for i, Match in ipairs(Blacklist) do
+    if Player1 == Match then
+      print("Name")
+      print(Match)
+      print("Steam ID")
+      print(CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 1").Value)
+      if ActiveHost == 1 then
+        CheatTable.getMemoryRecordByDescription("Kick Player 1").Active = true
+        sleep(1100)
+        CheatTable.getMemoryRecordByDescription("Kick Player 1").Active = false
+      else
+        CheatTable.getMemoryRecordByDescription("Leave Session").Active = true
+        sleep(1100)
+        CheatTable.getMemoryRecordByDescription("Leave Session").Active = false
+      end
+    end
+
+    if Player2 == Match then
+      print("Name")
+      print(Match)
+      print("Steam ID")
+      print(CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 2").Value)
+      if isActiveHost == 1 then
+        CheatTable.getMemoryRecordByDescription("Kick Player 2").Active = true
+        sleep(1100)
+        CheatTable.getMemoryRecordByDescription("Kick Player 2").Active = false
+      else
+        CheatTable.getMemoryRecordByDescription("Leave Session").Active = true
+        sleep(1100)
+        CheatTable.getMemoryRecordByDescription("Leave Session").Active = false
+      end
+    end
+
+    if Player3 == Match then
+      print("Name")
+      print(Match)
+      print("Steam ID")
+      print(CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 3").Value)
+      if isActiveHost == 1 then
+        CheatTable.getMemoryRecordByDescription("Kick Player 3").Active = true
+        sleep(1100)
+        CheatTable.getMemoryRecordByDescription("Kick Player 3").Active = false
+      else
+        CheatTable.getMemoryRecordByDescription("Leave Session").Active = true
+        sleep(1100)
+        CheatTable.getMemoryRecordByDescription("Leave Session").Active = false
+      end
+    end
+
+    if Player4 == Match then
+      print("Name")
+      print(Match)
+      print("Steam ID")
+      print(CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 4").Value)
+      if isActiveHost == 1 then
+        CheatTable.getMemoryRecordByDescription("Kick Player 4").Active = true
+        sleep(1100)
+        CheatTable.getMemoryRecordByDescription("Kick Player 4").Active = false
+      else
+        CheatTable.getMemoryRecordByDescription("Leave Session").Active = true
+        sleep(1100)
+        CheatTable.getMemoryRecordByDescription("Leave Session").Active = false
+      end
+    end
+
+    if Player5 == Match then
+      print("Name")
+      print(Match)
+      print("Steam ID")
+      print(CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 5").Value)
+      if isActiveHost == 1 then
+        CheatTable.getMemoryRecordByDescription("Kick Player 5").Active = true
+        sleep(1100)
+        CheatTable.getMemoryRecordByDescription("Kick Player 5").Active = false
+      else
+        CheatTable.getMemoryRecordByDescription("Leave Session").Active = true
+        sleep(1100)
+        CheatTable.getMemoryRecordByDescription("Leave Session").Active = false
+      end
+    end
+  end
+end
+
+checkForPlayers()
+if(BlacklistNameTimer == nil) then
+  BlacklistNameTimer = createTimer(getMainForm())
+  BlacklistNameTimer.Interval = 1000
+  BlacklistNameTimer.OnTimer = function(timer)
+    checkForPlayers()
+  end
+end
+BlacklistNameTimer.setEnabled(true)
+
+[DISABLE]
+{$lua}
+if syntaxcheck then return end
+if BlacklistNameTimer ~= nil then
+  BlacklistNameTimer.setEnabled(false)
+end
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1337049300</ID>
+          <Description>"Ogre Anti-Hack Technology ID"</Description>
+          <LastState/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>{Script by GonthorianDX
+This script checks for blacklisted players based off their Steam ID
+Kicks them if you are the host or you will leave the session if you are not the host}
+
+
+[ENABLE]
+{$lua}
+if syntaxcheck then return end
+
+  local Blacklist = {
+  --ID's go here
+  "11000010212485F", --Malcolm Reynolds
+  }
+
+--------------------LEAVE ALL THIS CRAP BELOW HERE ALONE------------------------
+
+
+local function checkForPlayersID()
+  local CheatTable = getAddressList()
+  local Player1 = CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 1").Value
+  local Player2 = CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 2").Value
+  local Player3 = CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 3").Value
+  local Player4 = CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 4").Value
+  local Player5 = CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 5").Value
+  local Host = "[[BaseB]+10]+10"
+
+  local isActiveHost = readInteger(Host)
+  for i, Match in ipairs(Blacklist) do
+    if Player1 == Match then
+      print("Steam ID")
+      print(Match)
+      print("Name")
+      print(CheatTable.getMemoryRecordByDescription("Name Player 1").Value)
+      if ActiveHost == 1 then
+        CheatTable.getMemoryRecordByDescription("Kick Player 1").Active = true
+        sleep(1100)
+        CheatTable.getMemoryRecordByDescription("Kick Player 1").Active = false
+      else
+        CheatTable.getMemoryRecordByDescription("Leave Session").Active = true
+        sleep(1100)
+        CheatTable.getMemoryRecordByDescription("Leave Session").Active = false
+      end
+    end
+
+    if Player2 == Match then
+      print("Steam ID")
+      print(Match)
+      print("Name")
+      print(CheatTable.getMemoryRecordByDescription("Name Player 2").Value)
+      if isActiveHost == 1 then
+        CheatTable.getMemoryRecordByDescription("Kick Player 2").Active = true
+        sleep(1100)
+        CheatTable.getMemoryRecordByDescription("Kick Player 2").Active = false
+      else
+        CheatTable.getMemoryRecordByDescription("Leave Session").Active = true
+        sleep(1100)
+        CheatTable.getMemoryRecordByDescription("Leave Session").Active = false
+      end
+    end
+
+    if Player3 == Match then
+      print("Steam ID")
+      print(Match)
+      print("Name")
+      print(CheatTable.getMemoryRecordByDescription("Name Player 3").Value)
+      if isActiveHost == 1 then
+        CheatTable.getMemoryRecordByDescription("Kick Player 3").Active = true
+        sleep(1100)
+        CheatTable.getMemoryRecordByDescription("Kick Player 3").Active = false
+      else
+        CheatTable.getMemoryRecordByDescription("Leave Session").Active = true
+        sleep(1100)
+        CheatTable.getMemoryRecordByDescription("Leave Session").Active = false
+      end
+    end
+
+    if Player4 == Match then
+      print("Steam ID")
+      print(Match)
+      print("Name")
+      print(CheatTable.getMemoryRecordByDescription("Name Player 4").Value)
+      if isActiveHost == 1 then
+        CheatTable.getMemoryRecordByDescription("Kick Player 4").Active = true
+        sleep(1100)
+        CheatTable.getMemoryRecordByDescription("Kick Player 4").Active = false
+      else
+        CheatTable.getMemoryRecordByDescription("Leave Session").Active = true
+        sleep(1100)
+        CheatTable.getMemoryRecordByDescription("Leave Session").Active = false
+      end
+    end
+
+    if Player5 == Match then
+      print("Steam ID")
+      print(Match)
+      print("Name")
+      print(CheatTable.getMemoryRecordByDescription("Name Player 5").Value)
+      if isActiveHost == 1 then
+        CheatTable.getMemoryRecordByDescription("Kick Player 5").Active = true
+        sleep(1100)
+        CheatTable.getMemoryRecordByDescription("Kick Player 5").Active = false
+      else
+        CheatTable.getMemoryRecordByDescription("Leave Session").Active = true
+        sleep(1100)
+        CheatTable.getMemoryRecordByDescription("Leave Session").Active = false
+      end
+    end
+  end
+end
+
+checkForPlayersID()
+if(BlacklistIDTimer == nil) then
+  BlacklistIDTimer = createTimer(getMainForm())
+  BlacklistIDTimer.Interval = 1000
+  BlacklistIDTimer.OnTimer = function(timer)
+    checkForPlayersID()
+  end
+end
+BlacklistIDTimer.setEnabled(true)
+
+[DISABLE]
+{$lua}
+if syntaxcheck then return end
+if BlacklistIDTimer ~= nil then
+  BlacklistIDTimer.setEnabled(false)
+end
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>91785</ID>
+          <Description>"Session Info"</Description>
+          <Options moHideChildren="1"/>
+          <LastState Value="" RealAddress="00000000"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>1337049125</ID>
+              <Description>"Current Player"</Description>
+              <Options moHideChildren="1"/>
+              <LastState Value="" RealAddress="00000000"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>91845</ID>
+                  <Description>"Player 1"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState Value="" RealAddress="00000000"/>
+                  <GroupHeader>1</GroupHeader>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>1337048809</ID>
+                      <Description>"Kick Player 1"</Description>
+                      <LastState/>
+                      <Color>000080</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+alloc(KickOut,256,DarkSoulsRemastered.exe)
+registersymbol(KickOut)
+
+createthread(KickOut)
+
+KickOut:
+mov edx,10044001
+mov r8d,01
+sub rsp,38
+call 1406E6920
+add rsp,38
+ret
+
+[DISABLE]
+dealloc(KickOut)
+unregistersymbol(KickOut)
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>91812</ID>
+                      <Description>"Level"</Description>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>BaseX</Address>
+                      <Offsets>
+                        <Offset>90</Offset>
+                        <Offset>568</Offset>
+                        <Offset>38</Offset>
+                        <Offset>18</Offset>
+                        <Offset>68</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>91792</ID>
+                      <Description>"Attributes"</Description>
+                      <Options moHideChildren="1"/>
+                      <LastState Value="" RealAddress="00000000"/>
+                      <GroupHeader>1</GroupHeader>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>91804</ID>
+                          <Description>"VIT"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>40</Offset>
+                            <Offset>568</Offset>
+                            <Offset>38</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>91805</ID>
+                          <Description>"ATN"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>48</Offset>
+                            <Offset>568</Offset>
+                            <Offset>38</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>91807</ID>
+                          <Description>"END"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>50</Offset>
+                            <Offset>568</Offset>
+                            <Offset>38</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>91806</ID>
+                          <Description>"STR"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>58</Offset>
+                            <Offset>568</Offset>
+                            <Offset>38</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>91811</ID>
+                          <Description>"DEX"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>60</Offset>
+                            <Offset>568</Offset>
+                            <Offset>38</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>91810</ID>
+                          <Description>"RES"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>88</Offset>
+                            <Offset>568</Offset>
+                            <Offset>38</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>91809</ID>
+                          <Description>"INT"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>68</Offset>
+                            <Offset>568</Offset>
+                            <Offset>38</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>91808</ID>
+                          <Description>"FTH"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>70</Offset>
+                            <Offset>568</Offset>
+                            <Offset>38</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>92322</ID>
+                      <Description>"Name Player 1"</Description>
+                      <Color>008000</Color>
+                      <VariableType>String</VariableType>
+                      <Length>32</Length>
+                      <Unicode>1</Unicode>
+                      <CodePage>0</CodePage>
+                      <ZeroTerminate>1</ZeroTerminate>
+                      <Address>BaseX</Address>
+                      <Offsets>
+                        <Offset>A8</Offset>
+                        <Offset>568</Offset>
+                        <Offset>38</Offset>
+                        <Offset>18</Offset>
+                        <Offset>68</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337047849</ID>
+                      <Description>"Steam Name"</Description>
+                      <VariableType>String</VariableType>
+                      <Length>32</Length>
+                      <Unicode>1</Unicode>
+                      <CodePage>0</CodePage>
+                      <ZeroTerminate>1</ZeroTerminate>
+                      <Address>BaseX</Address>
+                      <Offsets>
+                        <Offset>58</Offset>
+                        <Offset>580</Offset>
+                        <Offset>38</Offset>
+                        <Offset>18</Offset>
+                        <Offset>68</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337047846</ID>
+                      <Description>"SteamID64 (H3x) 1"</Description>
+                      <VariableType>String</VariableType>
+                      <Length>32</Length>
+                      <Unicode>1</Unicode>
+                      <CodePage>0</CodePage>
+                      <ZeroTerminate>1</ZeroTerminate>
+                      <Address>BaseX</Address>
+                      <Offsets>
+                        <Offset>50</Offset>
+                        <Offset>18</Offset>
+                        <Offset>580</Offset>
+                        <Offset>38</Offset>
+                        <Offset>18</Offset>
+                        <Offset>68</Offset>
+                      </Offsets>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>1337047879</ID>
+                          <Description>"Copy current player steam link"</Description>
+                          <LastState/>
+                          <Color>008000</Color>
+                          <VariableType>Auto Assembler Script</VariableType>
+                          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+{$lua}
+function NameGet()
+  local CheatTable = getAddressList()
+  local HexID = CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 1").Value
+  local WebAddress = " https://steamcommunity.com/profiles/" .. tostring(tonumber(HexID, 16))
+  writeToClipboard(WebAddress)
+end
+
+if not syntaxcheck then NameGet() end
+{$asm}
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+{$lua}
+function NameGet()
+  local CheatTable = getAddressList()
+  local HexID = CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 1").Value
+  local WebAddress = " https://steamcommunity.com/profiles/" .. tostring(tonumber(HexID, 16))
+  writeToClipboard(WebAddress)
+end
+
+if not syntaxcheck then NameGet() end
+{$asm}
+</AssemblerScript>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>91881</ID>
+                  <Description>"Player 2"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState Value="" RealAddress="00000000"/>
+                  <GroupHeader>1</GroupHeader>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>1337048810</ID>
+                      <Description>"Kick Player 2"</Description>
+                      <LastState/>
+                      <Color>000080</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+alloc(KickOut,256,DarkSoulsRemastered.exe)
+registersymbol(KickOut)
+
+createthread(KickOut)
+
+KickOut:
+mov edx,10044002
+mov r8d,01
+sub rsp,38
+call 1406E6920
+add rsp,38
+ret
+
+[DISABLE]
+dealloc(KickOut)
+unregistersymbol(KickOut)
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>91883</ID>
+                      <Description>"Level"</Description>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>BaseX</Address>
+                      <Offsets>
+                        <Offset>90</Offset>
+                        <Offset>568</Offset>
+                        <Offset>70</Offset>
+                        <Offset>18</Offset>
+                        <Offset>68</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>91894</ID>
+                      <Description>"Attributes"</Description>
+                      <Options moHideChildren="1"/>
+                      <LastState Value="" RealAddress="00000000"/>
+                      <GroupHeader>1</GroupHeader>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>91895</ID>
+                          <Description>"VIT"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>40</Offset>
+                            <Offset>568</Offset>
+                            <Offset>70</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>91896</ID>
+                          <Description>"ATN"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>48</Offset>
+                            <Offset>568</Offset>
+                            <Offset>70</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>91897</ID>
+                          <Description>"END"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>50</Offset>
+                            <Offset>568</Offset>
+                            <Offset>70</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>91898</ID>
+                          <Description>"STR"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>58</Offset>
+                            <Offset>568</Offset>
+                            <Offset>70</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>91899</ID>
+                          <Description>"DEX"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>60</Offset>
+                            <Offset>568</Offset>
+                            <Offset>70</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>91900</ID>
+                          <Description>"RES"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>88</Offset>
+                            <Offset>568</Offset>
+                            <Offset>70</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>91901</ID>
+                          <Description>"INT"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>68</Offset>
+                            <Offset>568</Offset>
+                            <Offset>70</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>91902</ID>
+                          <Description>"FTH"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>70</Offset>
+                            <Offset>568</Offset>
+                            <Offset>70</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>92335</ID>
+                      <Description>"Name Player 2"</Description>
+                      <VariableType>String</VariableType>
+                      <Length>32</Length>
+                      <Unicode>1</Unicode>
+                      <CodePage>0</CodePage>
+                      <ZeroTerminate>1</ZeroTerminate>
+                      <Address>BaseX</Address>
+                      <Offsets>
+                        <Offset>A8</Offset>
+                        <Offset>568</Offset>
+                        <Offset>70</Offset>
+                        <Offset>18</Offset>
+                        <Offset>68</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337047853</ID>
+                      <Description>"Steam Name"</Description>
+                      <VariableType>String</VariableType>
+                      <Length>32</Length>
+                      <Unicode>1</Unicode>
+                      <CodePage>0</CodePage>
+                      <ZeroTerminate>1</ZeroTerminate>
+                      <Address>BaseX</Address>
+                      <Offsets>
+                        <Offset>58</Offset>
+                        <Offset>580</Offset>
+                        <Offset>70</Offset>
+                        <Offset>18</Offset>
+                        <Offset>68</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337047852</ID>
+                      <Description>"SteamID64 (H3x) 2"</Description>
+                      <VariableType>String</VariableType>
+                      <Length>32</Length>
+                      <Unicode>1</Unicode>
+                      <CodePage>0</CodePage>
+                      <ZeroTerminate>1</ZeroTerminate>
+                      <Address>BaseX</Address>
+                      <Offsets>
+                        <Offset>50</Offset>
+                        <Offset>18</Offset>
+                        <Offset>580</Offset>
+                        <Offset>70</Offset>
+                        <Offset>18</Offset>
+                        <Offset>68</Offset>
+                      </Offsets>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>1337047877</ID>
+                          <Description>"Copy current player steam link"</Description>
+                          <LastState/>
+                          <Color>008000</Color>
+                          <VariableType>Auto Assembler Script</VariableType>
+                          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+{$lua}
+function NameGet()
+  local CheatTable = getAddressList()
+  local HexID = CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 2").Value
+  local WebAddress = " https://steamcommunity.com/profiles/" .. tostring(tonumber(HexID, 16))
+  writeToClipboard(WebAddress)
+end
+
+if not syntaxcheck then NameGet() end
+{$asm}
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+{$lua}
+function NameGet()
+  local CheatTable = getAddressList()
+  local HexID = CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 2").Value
+  local WebAddress = " https://steamcommunity.com/profiles/" .. tostring(tonumber(HexID, 16))
+  writeToClipboard(WebAddress)
+end
+
+if not syntaxcheck then NameGet() end
+{$asm}
+</AssemblerScript>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>91954</ID>
+                  <Description>"Player 3"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState Value="" RealAddress="00000000"/>
+                  <GroupHeader>1</GroupHeader>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>1337048811</ID>
+                      <Description>"Kick Player 3"</Description>
+                      <LastState/>
+                      <Color>000080</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+alloc(KickOut,256,DarkSoulsRemastered.exe)
+registersymbol(KickOut)
+
+createthread(KickOut)
+
+KickOut:
+mov edx,10044003
+mov r8d,01
+sub rsp,38
+call 1406E6920
+add rsp,38
+ret
+
+[DISABLE]
+dealloc(KickOut)
+unregistersymbol(KickOut)
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>91956</ID>
+                      <Description>"Level"</Description>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>BaseX</Address>
+                      <Offsets>
+                        <Offset>90</Offset>
+                        <Offset>568</Offset>
+                        <Offset>A8</Offset>
+                        <Offset>18</Offset>
+                        <Offset>68</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>91967</ID>
+                      <Description>"Attributes"</Description>
+                      <Options moHideChildren="1"/>
+                      <LastState Value="" RealAddress="00000000"/>
+                      <GroupHeader>1</GroupHeader>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>91968</ID>
+                          <Description>"VIT"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>40</Offset>
+                            <Offset>568</Offset>
+                            <Offset>A8</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>91969</ID>
+                          <Description>"ATN"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>48</Offset>
+                            <Offset>568</Offset>
+                            <Offset>A8</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>91970</ID>
+                          <Description>"END"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>50</Offset>
+                            <Offset>568</Offset>
+                            <Offset>A8</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>91971</ID>
+                          <Description>"STR"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>58</Offset>
+                            <Offset>568</Offset>
+                            <Offset>A8</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>91972</ID>
+                          <Description>"DEX"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>60</Offset>
+                            <Offset>568</Offset>
+                            <Offset>A8</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>91973</ID>
+                          <Description>"RES"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>88</Offset>
+                            <Offset>568</Offset>
+                            <Offset>A8</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>91974</ID>
+                          <Description>"INT"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>68</Offset>
+                            <Offset>568</Offset>
+                            <Offset>A8</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>91975</ID>
+                          <Description>"FTH"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>A8</Offset>
+                            <Offset>568</Offset>
+                            <Offset>A8</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>92337</ID>
+                      <Description>"Name Player 3"</Description>
+                      <VariableType>String</VariableType>
+                      <Length>32</Length>
+                      <Unicode>1</Unicode>
+                      <CodePage>0</CodePage>
+                      <ZeroTerminate>1</ZeroTerminate>
+                      <Address>BaseX</Address>
+                      <Offsets>
+                        <Offset>A8</Offset>
+                        <Offset>568</Offset>
+                        <Offset>A8</Offset>
+                        <Offset>18</Offset>
+                        <Offset>68</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337047859</ID>
+                      <Description>"Steam Name"</Description>
+                      <Color>000000</Color>
+                      <VariableType>String</VariableType>
+                      <Length>32</Length>
+                      <Unicode>1</Unicode>
+                      <CodePage>0</CodePage>
+                      <ZeroTerminate>1</ZeroTerminate>
+                      <Address>BaseX</Address>
+                      <Offsets>
+                        <Offset>58</Offset>
+                        <Offset>580</Offset>
+                        <Offset>A8</Offset>
+                        <Offset>18</Offset>
+                        <Offset>68</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337047858</ID>
+                      <Description>"SteamID64 (H3x) 3"</Description>
+                      <Color>000000</Color>
+                      <VariableType>String</VariableType>
+                      <Length>32</Length>
+                      <Unicode>1</Unicode>
+                      <CodePage>0</CodePage>
+                      <ZeroTerminate>1</ZeroTerminate>
+                      <Address>BaseX</Address>
+                      <Offsets>
+                        <Offset>50</Offset>
+                        <Offset>18</Offset>
+                        <Offset>580</Offset>
+                        <Offset>A8</Offset>
+                        <Offset>18</Offset>
+                        <Offset>68</Offset>
+                      </Offsets>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>1337047875</ID>
+                          <Description>"Copy current player steam link"</Description>
+                          <LastState/>
+                          <Color>008000</Color>
+                          <VariableType>Auto Assembler Script</VariableType>
+                          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+{$lua}
+function NameGet()
+  local CheatTable = getAddressList()
+  local HexID = CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 3").Value
+  local WebAddress = " https://steamcommunity.com/profiles/" .. tostring(tonumber(HexID, 16))
+  writeToClipboard(WebAddress)
+end
+
+if not syntaxcheck then NameGet() end
+{$asm}
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+{$lua}
+function NameGet()
+  local CheatTable = getAddressList()
+  local HexID = CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 3").Value
+  local WebAddress = " https://steamcommunity.com/profiles/" .. tostring(tonumber(HexID, 16))
+  writeToClipboard(WebAddress)
+end
+
+if not syntaxcheck then NameGet() end
+{$asm}
+</AssemblerScript>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>92027</ID>
+                  <Description>"Player 4"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState Value="" RealAddress="00000000"/>
+                  <GroupHeader>1</GroupHeader>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>1337048812</ID>
+                      <Description>"Kick Player 4"</Description>
+                      <LastState/>
+                      <Color>000080</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+alloc(KickOut,256,DarkSoulsRemastered.exe)
+registersymbol(KickOut)
+
+createthread(KickOut)
+
+KickOut:
+mov edx,10044004
+mov r8d,01
+sub rsp,38
+call 1406E6920
+add rsp,38
+ret
+
+[DISABLE]
+dealloc(KickOut)
+unregistersymbol(KickOut)
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>92029</ID>
+                      <Description>"Level"</Description>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>BaseX</Address>
+                      <Offsets>
+                        <Offset>90</Offset>
+                        <Offset>568</Offset>
+                        <Offset>E0</Offset>
+                        <Offset>18</Offset>
+                        <Offset>68</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>92040</ID>
+                      <Description>"Attributes"</Description>
+                      <Options moHideChildren="1"/>
+                      <LastState Value="" RealAddress="00000000"/>
+                      <GroupHeader>1</GroupHeader>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>92041</ID>
+                          <Description>"VIT"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>40</Offset>
+                            <Offset>568</Offset>
+                            <Offset>E0</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>92042</ID>
+                          <Description>"ATN"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>48</Offset>
+                            <Offset>568</Offset>
+                            <Offset>E0</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>92043</ID>
+                          <Description>"END"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>50</Offset>
+                            <Offset>568</Offset>
+                            <Offset>E0</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>92044</ID>
+                          <Description>"STR"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>58</Offset>
+                            <Offset>568</Offset>
+                            <Offset>E0</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>92045</ID>
+                          <Description>"DEX"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>60</Offset>
+                            <Offset>568</Offset>
+                            <Offset>E0</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>92046</ID>
+                          <Description>"RES"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>88</Offset>
+                            <Offset>568</Offset>
+                            <Offset>E0</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>92047</ID>
+                          <Description>"INT"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>68</Offset>
+                            <Offset>568</Offset>
+                            <Offset>E0</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>92048</ID>
+                          <Description>"FTH"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>E0</Offset>
+                            <Offset>568</Offset>
+                            <Offset>E0</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>92340</ID>
+                      <Description>"Name Player 4"</Description>
+                      <VariableType>String</VariableType>
+                      <Length>32</Length>
+                      <Unicode>1</Unicode>
+                      <CodePage>0</CodePage>
+                      <ZeroTerminate>1</ZeroTerminate>
+                      <Address>BaseX</Address>
+                      <Offsets>
+                        <Offset>A8</Offset>
+                        <Offset>568</Offset>
+                        <Offset>E0</Offset>
+                        <Offset>18</Offset>
+                        <Offset>68</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337047856</ID>
+                      <Description>"Steam Name"</Description>
+                      <Color>000000</Color>
+                      <VariableType>String</VariableType>
+                      <Length>32</Length>
+                      <Unicode>1</Unicode>
+                      <CodePage>0</CodePage>
+                      <ZeroTerminate>1</ZeroTerminate>
+                      <Address>BaseX</Address>
+                      <Offsets>
+                        <Offset>58</Offset>
+                        <Offset>580</Offset>
+                        <Offset>E0</Offset>
+                        <Offset>18</Offset>
+                        <Offset>68</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337047857</ID>
+                      <Description>"SteamID64 (H3x) 4"</Description>
+                      <Color>000000</Color>
+                      <VariableType>String</VariableType>
+                      <Length>32</Length>
+                      <Unicode>1</Unicode>
+                      <CodePage>0</CodePage>
+                      <ZeroTerminate>1</ZeroTerminate>
+                      <Address>BaseX</Address>
+                      <Offsets>
+                        <Offset>50</Offset>
+                        <Offset>18</Offset>
+                        <Offset>580</Offset>
+                        <Offset>E0</Offset>
+                        <Offset>18</Offset>
+                        <Offset>68</Offset>
+                      </Offsets>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>1337047873</ID>
+                          <Description>"Copy current player steam link"</Description>
+                          <LastState/>
+                          <Color>008000</Color>
+                          <VariableType>Auto Assembler Script</VariableType>
+                          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+{$lua}
+function NameGet()
+  local CheatTable = getAddressList()
+  local HexID = CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 4").Value
+  local WebAddress = " https://steamcommunity.com/profiles/" .. tostring(tonumber(HexID, 16))
+  writeToClipboard(WebAddress)
+end
+
+if not syntaxcheck then NameGet() end
+{$asm}
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+{$lua}
+function NameGet()
+  local CheatTable = getAddressList()
+  local HexID = CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 4").Value
+  local WebAddress = " https://steamcommunity.com/profiles/" .. tostring(tonumber(HexID, 16))
+  writeToClipboard(WebAddress)
+end
+
+if not syntaxcheck then NameGet() end
+{$asm}
+</AssemblerScript>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>92100</ID>
+                  <Description>"Player 5"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState Value="" RealAddress="00000000"/>
+                  <GroupHeader>1</GroupHeader>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>1337048813</ID>
+                      <Description>"Kick Player 5"</Description>
+                      <LastState/>
+                      <Color>000080</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>[ENABLE]
+alloc(KickOut,256,DarkSoulsRemastered.exe)
+registersymbol(KickOut)
+
+createthread(KickOut)
+
+KickOut:
+mov edx,10044005
+mov r8d,01
+sub rsp,38
+call 1406E6920
+add rsp,38
+ret
+
+[DISABLE]
+dealloc(KickOut)
+unregistersymbol(KickOut)
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>92102</ID>
+                      <Description>"Level"</Description>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>BaseX</Address>
+                      <Offsets>
+                        <Offset>90</Offset>
+                        <Offset>568</Offset>
+                        <Offset>E0</Offset>
+                        <Offset>18</Offset>
+                        <Offset>68</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>92113</ID>
+                      <Description>"Attributes"</Description>
+                      <Options moHideChildren="1"/>
+                      <LastState Value="" RealAddress="00000000"/>
+                      <GroupHeader>1</GroupHeader>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>92114</ID>
+                          <Description>"VIT"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>40</Offset>
+                            <Offset>568</Offset>
+                            <Offset>118</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>92115</ID>
+                          <Description>"ATN"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>48</Offset>
+                            <Offset>568</Offset>
+                            <Offset>118</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>92116</ID>
+                          <Description>"END"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>50</Offset>
+                            <Offset>568</Offset>
+                            <Offset>118</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>92117</ID>
+                          <Description>"STR"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>58</Offset>
+                            <Offset>568</Offset>
+                            <Offset>118</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>92118</ID>
+                          <Description>"DEX"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>60</Offset>
+                            <Offset>568</Offset>
+                            <Offset>118</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>92119</ID>
+                          <Description>"RES"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>88</Offset>
+                            <Offset>568</Offset>
+                            <Offset>118</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>92120</ID>
+                          <Description>"INT"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>68</Offset>
+                            <Offset>568</Offset>
+                            <Offset>118</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>92121</ID>
+                          <Description>"FTH"</Description>
+                          <VariableType>4 Bytes</VariableType>
+                          <Address>BaseX</Address>
+                          <Offsets>
+                            <Offset>118</Offset>
+                            <Offset>568</Offset>
+                            <Offset>118</Offset>
+                            <Offset>18</Offset>
+                            <Offset>68</Offset>
+                          </Offsets>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>92342</ID>
+                      <Description>"Name Player 5"</Description>
+                      <Color>008000</Color>
+                      <VariableType>String</VariableType>
+                      <Length>32</Length>
+                      <Unicode>1</Unicode>
+                      <CodePage>0</CodePage>
+                      <ZeroTerminate>1</ZeroTerminate>
+                      <Address>BaseX</Address>
+                      <Offsets>
+                        <Offset>A8</Offset>
+                        <Offset>568</Offset>
+                        <Offset>E0</Offset>
+                        <Offset>18</Offset>
+                        <Offset>68</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337047861</ID>
+                      <Description>"Steam Name"</Description>
+                      <Color>000000</Color>
+                      <VariableType>String</VariableType>
+                      <Length>32</Length>
+                      <Unicode>1</Unicode>
+                      <CodePage>0</CodePage>
+                      <ZeroTerminate>1</ZeroTerminate>
+                      <Address>BaseX</Address>
+                      <Offsets>
+                        <Offset>58</Offset>
+                        <Offset>580</Offset>
+                        <Offset>118</Offset>
+                        <Offset>18</Offset>
+                        <Offset>68</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337047862</ID>
+                      <Description>"SteamID64 (H3x) 5"</Description>
+                      <Color>000000</Color>
+                      <VariableType>String</VariableType>
+                      <Length>32</Length>
+                      <Unicode>1</Unicode>
+                      <CodePage>0</CodePage>
+                      <ZeroTerminate>1</ZeroTerminate>
+                      <Address>BaseX</Address>
+                      <Offsets>
+                        <Offset>50</Offset>
+                        <Offset>18</Offset>
+                        <Offset>580</Offset>
+                        <Offset>118</Offset>
+                        <Offset>18</Offset>
+                        <Offset>68</Offset>
+                      </Offsets>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>1337047871</ID>
+                          <Description>"Copy current player steam link"</Description>
+                          <LastState/>
+                          <Color>008000</Color>
+                          <VariableType>Auto Assembler Script</VariableType>
+                          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+{$lua}
+function NameGet()
+  local CheatTable = getAddressList()
+  local HexID = CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 5").Value
+  local WebAddress = " https://steamcommunity.com/profiles/" .. tostring(tonumber(HexID, 16))
+  writeToClipboard(WebAddress)
+end
+
+if not syntaxcheck then NameGet() end
+{$asm}
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+{$lua}
+function NameGet()
+  local CheatTable = getAddressList()
+  local HexID = CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 5").Value
+  local WebAddress = " https://steamcommunity.com/profiles/" .. tostring(tonumber(HexID, 16))
+  writeToClipboard(WebAddress)
+end
+
+if not syntaxcheck then NameGet() end
+{$asm}
+</AssemblerScript>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>1337049301</ID>
+              <Description>"Recent Players"</Description>
+              <Options moHideChildren="1"/>
+              <LastState Value="" RealAddress="00000000"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>1337049304</ID>
+                  <Description>"Name"</Description>
+                  <LastState RealAddress="0C40E608"/>
+                  <Color>008000</Color>
+                  <VariableType>String</VariableType>
+                  <Length>32</Length>
+                  <Unicode>1</Unicode>
+                  <CodePage>0</CodePage>
+                  <ZeroTerminate>1</ZeroTerminate>
+                  <Address>BaseB</Address>
+                  <Offsets>
+                    <Offset>A8</Offset>
+                    <Offset>460</Offset>
+                    <Offset>18</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>1337048913</ID>
+                  <Description>"Name"</Description>
+                  <LastState RealAddress="0C40EC68"/>
+                  <Color>008000</Color>
+                  <VariableType>String</VariableType>
+                  <Length>32</Length>
+                  <Unicode>1</Unicode>
+                  <CodePage>0</CodePage>
+                  <ZeroTerminate>1</ZeroTerminate>
+                  <Address>BaseB</Address>
+                  <Offsets>
+                    <Offset>A8</Offset>
+                    <Offset>460+XC</Offset>
+                    <Offset>18</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>1337049317</ID>
+                  <Description>"Name"</Description>
+                  <LastState RealAddress="0C40F2C8"/>
+                  <Color>008000</Color>
+                  <VariableType>String</VariableType>
+                  <Length>32</Length>
+                  <Unicode>1</Unicode>
+                  <CodePage>0</CodePage>
+                  <ZeroTerminate>1</ZeroTerminate>
+                  <Address>BaseB</Address>
+                  <Offsets>
+                    <Offset>A8</Offset>
+                    <Offset>460+2*XC</Offset>
+                    <Offset>18</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>1337049371</ID>
+                  <Description>"Name"</Description>
+                  <LastState RealAddress="0C40F928"/>
+                  <Color>008000</Color>
+                  <VariableType>String</VariableType>
+                  <Length>32</Length>
+                  <Unicode>1</Unicode>
+                  <CodePage>0</CodePage>
+                  <ZeroTerminate>1</ZeroTerminate>
+                  <Address>BaseB</Address>
+                  <Offsets>
+                    <Offset>A8</Offset>
+                    <Offset>460+3*XC</Offset>
+                    <Offset>18</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>1337049425</ID>
+                  <Description>"Name"</Description>
+                  <LastState RealAddress="0C40FF88"/>
+                  <Color>008000</Color>
+                  <VariableType>String</VariableType>
+                  <Length>32</Length>
+                  <Unicode>1</Unicode>
+                  <CodePage>0</CodePage>
+                  <ZeroTerminate>1</ZeroTerminate>
+                  <Address>BaseB</Address>
+                  <Offsets>
+                    <Offset>A8</Offset>
+                    <Offset>460+4*XC</Offset>
+                    <Offset>18</Offset>
+                  </Offsets>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>1337048805</ID>
+              <Description>"Leave Session"</Description>
+              <LastState/>
+              <Color>000080</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+alloc(LeaveSession,256,DarkSoulsRemastered.exe)
+registersymbol(LeaveSession)
+
+createthread(LeaveSession)
+
+LeaveSession:
+mov rcx,[141D07180]
+sub rsp,38
+call 140502740
+add rsp,38
+ret
+
+[DISABLE]
+dealloc(LeaveSession)
+unregistersymbol(LeaveSession)
+</AssemblerScript>
+              <Hotkeys>
+                <Hotkey>
+                  <Action>Toggle Activation</Action>
+                  <Keys>
+                    <Key>107</Key>
+                  </Keys>
+                  <ID>0</ID>
+                </Hotkey>
+              </Hotkeys>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols>
+    <SymbolEntry>
+      <Name>XC</Name>
+      <Address>660</Address>
+    </SymbolEntry>
+  </UserdefinedSymbols>
+</CheatTable>
