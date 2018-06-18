@@ -24,3 +24,6 @@ Enjoy!
 
 [Download here](https://github.com/GonthorianDX/DSR_Ogre-_Anti-Hacker_Technology/archive/master.zip)
 
+
+-Credits goes to Phokz for the base table and session info
+
