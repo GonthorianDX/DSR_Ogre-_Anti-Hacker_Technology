@@ -27,5 +27,5 @@ Enjoy!
 [Demonstration video](https://youtu.be/MY6cj6MyQII)
 
 
--Credits goes to Phokz for the base table and session info
+-Credits goes to Phokz for the base table + session info and Pavuk for the disconnect scripts.
 
